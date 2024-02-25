@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile-customer</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#updbtn").click(function () {
+          let obj = {
+            url: "/postjobb",
+
+            //   req.query.email,req.query.name,req.query.contact,req.query.state,req.query.city,req.query.sc,req.query.dat,req.query.Taskk
+            data: {
+              email: $("#email").val(),
+              name: $("#name").val(),
+              contact: $("#contact").val(),
+              state: $("#state").val(),
+              city: $("#city").val(),
+              sc: $("#sc").val(),
+              dat: $("#dat").val(),
+              Taskk: $("#Taskk").val(),
+            },
+          };
+
+          $.ajax(obj)
+
+            .done(function (resp) {
+              alert(resp);
+            })
+
+            .fail(function (err) {
+              alert("Error=" + err);
+            });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center"
+      style="
+        margin-top: 3%;
+        width: 40%;
+        background-color: white;
+        border-radius: 10px;
+
+        border-style: groove;
+      "
+    >
+      <div class="row mt-2 mb-3 g-3 needs-validation" novalidate>
+        <!-- ---------------------------HEADER---------------------------------------- -->
+        <div class="row mb-2">
+          <center>
+            <p style="font-size: 24px">Post Job</p>
+          </center>
+        </div>
+
+        <!-- --------------------email-add-row------------------------------------- -->
+        <div class="row align-items-end">
+          <div class="col-md-7">
+            <label for="EmailAdd" class="form-label">Email Id</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Enter your Email address"
+              required
+            />
+          </div>
+        </div>
+        <!-- -------------------------NAME------------------------------------------------------- -->
+
+        <div class="col-md-6">
+          <label for="Name" class="form-label">Name</label>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            id="name"
+            required
+          />
+        </div>
+
+        <!-- -------------------------CONTACT NUMBER------------------------------------------------------- -->
+
+        <div class="col-md-5">
+          <label for="contact" class="form-label">Contact Number</label>
+          <div class="input-group has-validation">
+            <input
+              type="text"
+              name="contact"
+              maxlength="10"
+              class="form-control"
+              id="contact"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- --------------------------ADDRESS------------------------------------------------------ -->
+
+        <div class="col-md-11">
+          <label for="Addr" class="form-label">Address</label>
+          <input
+            type="text"
+            name="address"
+            class="form-control"
+            id="address"
+            required
+          />
+        </div>
+
+        <!-- --------------------------STATE-------------------------------------------- -->
+        <div class="col-md-6">
+          <label for="State" class="form-label">State</label>
+          <select
+            class="form-select"
+            name="state"
+            id="state"
+            name="state"
+            required
+          >
+            <option selected disabled value="">Choose...</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value="Andaman and Nicobar Islands">
+              Andaman and Nicobar Islands
+            </option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Dadra and Nagar Haveli and Daman and Diu">
+              Dadra and Nagar Haveli and Daman and Diu
+            </option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Puducherry">Puducherry</option>
+          </select>
+        </div>
+
+        <!-- ------------------------CITY------------------------------------------- -->
+
+        <div class="col-md-5">
+          <label for="City" class="form-label">City</label>
+          <input
+            type="text"
+            name="city"
+            class="form-control"
+            id="city"
+            required
+          />
+        </div>
+
+        <!-- -----------------------------task category------------------------------------------ -->
+
+        <div class="row mt-3 mb-3">
+          <div class="col">
+            <label for="sc" class="form-label"
+              >Select a Service Category:</label
+            >
+            <select
+              class="form-select form-select-lg bg-light fs-6"
+              name="sc"
+              id="sc"
+              required
+            >
+              <option selected disabled value="">Choose...</option>
+              <option value="maid">Maid Services</option>
+              <option value="gardening">Gardening/Landscaping Services</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- -------------------up to date ------------------------------- -->
+
+        <div class="row mt-3 mb-3">
+          <div class="col-md-8">
+            <label for="dat" class="form-label">Upto Date</label>
+            <input
+              type="date"
+              class="form-control form-control-lg bg-light fs-6"
+              id="dat"
+              name="dat"
+            />
+          </div>
+        </div>
+
+        <!-- -------------work to be done----------------------------------------------------------- -->
+
+        <div class="row mt-3 mb-3">
+          <div class="col">
+            <div class="form-floating form-floating-lg bg-light fs-6">
+              <textarea class="form-control" name="Taskk" id="Taskk"></textarea>
+              <label for="Taskk">Task? /work to be Done</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------- -->
+        <div class="col-12 text-center">
+          <button class="btn btn-primary" id="updbtn" type="button">
+            post job
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

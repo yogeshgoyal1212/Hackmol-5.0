@@ -1,0 +1,169 @@
+#background-video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    
+    
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 35px;
+    height: 40px;
+    font-size: 22px;   
+    font-weight: bold;
+    cursor: pointer;
+    color: bisque;
+    transition-duration: 0.43s;
+}
+nav ul li a{
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 35px;
+    height: 40px;
+    font-size: 22px;   
+    font-weight: bold;
+    cursor: pointer;
+    color: bisque;
+    transition-duration: 0.43s;
+    text-decoration: none;
+
+}
+nav ul li a:hover{
+    font-size: 30px;
+    background-image: url(360_F_456001627_vYt7ZFjxEQ1sshme67JAXorKRPo8gsfN.jpg);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+
+}
+nav ul li:hover{
+    font-size: 30px;
+    background-image: url(360_F_456001627_vYt7ZFjxEQ1sshme67JAXorKRPo8gsfN.jpg);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+}
+.names{
+    position: absolute;
+    font-size: 70px;
+    font-weight: bold;
+    width: 750px;
+    left: 450px;
+    top: 250px;
+    background-image: url(istockphoto-1431456495-612x612.jpg);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    /* animation: type 4s steps(60, end); */
+
+
+}
+/* @keyframes delayy{
+    10
+} */
+.moto{
+    color: Pink; 
+    white-space: nowrap;
+    overflow: hidden;
+    width: 40em;
+    animation: type 4s steps(60, end); 
+    margin-top: 420px;
+    margin-left: 250px;
+    font-size: 25px;
+  }
+  
+  @keyframes type{ 
+    from { width: 0; } 
+  } 
+#english button{
+    position: relative;
+    width:150px;
+    height: 40px;
+    background-color: transparent;
+    left:250px;
+    top:700px;
+    font-size: 23px;
+    backdrop-filter: blur(30px);
+    transition: 0.5s ease-in;
+    
+    text-decoration: none;
+}
+#english button a{
+    text-decoration: none;
+    color: white;
+}
+#english button:hover{
+    color: black;
+    box-shadow: 0px 0px 50px green;
+    background-color: orange;
+}
+#english button a:hover{
+    color:black;
+}
+#hindi button{
+    position: relative;
+    width:150px;
+    height: 40px;
+    background-color: transparent;
+    left:500px;
+    top:660px;
+    font-size: 23px;
+    backdrop-filter: blur(30px);
+    transition: 0.5s ease-in;
+    
+    text-decoration: none;
+}
+#hindi button a{
+    text-decoration: none;
+    color: white;
+}
+#hindi button:hover{
+    color: black;
+    box-shadow: 0px 0px 50px green;
+    background-color: orange;
+}
+#hindi button a:hover{
+    color:black;
+}
+#punjabi button{
+    position: relative;
+    width:150px;
+    height: 40px;
+    background-color: transparent;
+    left:750px;
+    top:620px;
+    font-size: 23px;
+    backdrop-filter: blur(30px);
+    transition: 0.5s ease-in;
+    
+    text-decoration: none;
+}
+#punjabi button a{
+    text-decoration: none;
+    color: white;
+}
+#punjabi button:hover{
+    color: black;
+    box-shadow: 0px 0px 50px green;
+    background-color: orange;
+}
+#punjabi button a:hover{
+    color:black;
+}

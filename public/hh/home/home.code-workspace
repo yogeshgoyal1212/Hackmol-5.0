@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../HACKMOL5.0/home"
+		},
+		{
+			"path": "../../HACKMOL5.0/LoginPage"
+		},
+		{
+			"path": "../../HACKMOL5.0/SignUp"
+		},
+		{
+			"path": "../../HACKMOL5.0/AboutUS"
+		},
+		{
+			"path": "../../HACKMOL5.0/Articles"
+		},
+		{
+			"path": "../../HACKMOL5.0/Browse"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "home"
+	}
+}
